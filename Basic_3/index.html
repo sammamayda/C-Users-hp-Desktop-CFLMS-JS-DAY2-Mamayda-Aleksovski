@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Basic 1</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+
+	<table border="1">
+		<caption>The weather prognose</caption>
+		<thead>
+			<tr>
+				<th>The temperature</th>
+				<th>The message to the public</th>
+				<th>Efect on our mood</th>
+			</tr>
+		</thead>
+		
+
+<script>
+//	document.write("<tr><td>kagsksa</td>");
+
+	var temperature = Math.round(Math.random()*40) - 5;
+	
+
+	 if (temperature <10) {
+	 	document.write("<tr><td id ='cold'>" + temperature + "&#8451</td>");
+	 	document.write("<td>" + "The weather is cold" + "</td>");
+	 	document.write("<td>" + "<img src='snowy.png'>" + "</td></tr>");
+
+	 } else if(temperature<32) {
+	 	document.write("<tr><td id ='moderate'>" + temperature + "&#8451</td>");
+	 	document.write("<td>" + "The weather is moderate" + "</td>");
+	 	document.write("<td>" + "<img src='cloudy.jpg'>" + "</td></tr>");
+	 } else {
+	 	document.write("<tr><td id ='hot'>" + temperature + "&#8451</td>");
+	 	document.write("<td>" + "The weather is hot" + "</td>");
+	 	document.write("<td>" + "<img src='sunny.jpg'>" + "</td></tr>");
+	 }
+
+	 document.write("</table>")
+	 document.write("<button id='button1'>See weather for tommorrow</button>")
+
+</script>
+
+
+</body>
+</html>
