@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Intermediate 1</title>
+</head>
+<body>
+
+<script>
+	var Martin = 76;
+	var Thomas = 85;
+	var Klaus = 65;
+	var Maria = 93;
+	var David = 81;
+	var allGrades = [];
+	document.write("The grade for Martin is: ");
+	grading(Martin);
+	document.write("The grade for Thomas is: ");
+	grading(Thomas);
+	document.write("The grade for Klaus is: ");
+	grading(Klaus);
+	document.write("The grade for Maria is: ");
+	grading(Maria);
+	document.write("The grade for David is: ");
+	grading(David);
+	document.write("<hr>");
+
+	var sum = 0;
+	for (var i=0;i<allGrades.length;i++){
+		sum += allGrades[i]; 
+	}
+	var averagePoints = sum/allGrades.length;
+	document.write("The average points for the class is: " + averagePoints + "<br><hr>");
+
+	document.write("The grade for the class is: ");
+	grading(averagePoints)
+	document.write("<hr>");
+
+	function grading(points) {
+
+		allGrades.push(points);
+
+		if(points<60){
+			document.write("F <br>");
+		} else if(points<70){
+			document.write("D <br>");
+		} else if(points<80){
+			document.write("C <br>");
+		} else if(points<90){
+			document.write("B <br>");
+		} else if(points<100){
+			document.write("A <br>");
+		}
+
+	}
+</script>
+</body>
+</html>

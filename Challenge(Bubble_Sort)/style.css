@@ -1,0 +1,32 @@
+body {
+
+}
+
+.bubbles {
+	width: 50px;
+	float: left;
+	position: relative
+}
+
+img {
+	width: 100%;
+}
+
+p {
+	position: absolute;
+	top: -22px;
+	left: 15px;
+	color: red;
+	font-size: 30px;
+	font-weight: bold;
+
+}
+
+.headline {
+	position: static;
+}
+
+.headline2 {
+	position: static;
+	color: green;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+
+<script>
+
+	var startArray = [1, 3, 5, 4, 5, 9, 6, 1, 2, 6, 5, 4, 4, 9, 7];
+	document.write(`<p class="headline">The original array is:</p>`);
+ 	
+
+ 	for(var i=0; i<startArray.length; i++){
+ 		document.write(`<div class="bubbles"><img src="bubble.png"><p>${startArray[i]}</p></div>`);
+ 	}
+
+
+
+	var temp;
+	for(var i=0; i<startArray.length; i++){
+		var theBiggest = -30000;
+		var indexOfTheBiggest = -1;
+		for (var j=i; j<startArray.length; j++){
+			if(startArray[j]>theBiggest){
+				theBiggest = startArray[j];
+				indexOfTheBiggest = j;
+			}
+		}
+
+		temp = startArray[i];
+		startArray[i] = startArray[indexOfTheBiggest];
+		startArray[indexOfTheBiggest] = temp;
+	}
+
+	document.write(`<br><br><br><br><p class="headline2">The sorted array is:</p>`);
+
+	for(var i=0; i<startArray.length; i++){
+ 		document.write(`<div class="bubbles"><img src="bubble.png"><p>${startArray[i]}</p></div>`);
+ 	}
+</script>
+</body>
+</html>
